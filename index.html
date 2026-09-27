@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EmpresaVende — Sistema de gestão para empresas de serviço</title>
+    <title>Sistema de Gestão para Empresas de Serviço | EmpresaVende</title>
     <meta
       name="description"
-      content="Orçamentos, agenda, ordens de serviço, funil de vendas e documentos em um só sistema. Feito para empresas de serviço de 40 segmentos. Teste grátis."
+      content="Funil de vendas, orçamentos, agenda, ordem de serviço e app do técnico em um só sistema. Pronto para 40 segmentos de serviço. Usuários ilimitados. Teste grátis."
     />
     <meta name="theme-color" content="#15803d" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href="https://empresavende.com/" />
 
     <meta property="og:type" content="website" />
@@ -21,6 +22,15 @@
       content="Do primeiro contato até a venda: funil de vendas, orçamentos, agenda, ordens de serviço e app do técnico."
     />
     <meta property="og:url" content="https://empresavende.com/" />
+    <meta property="og:image" content="https://empresavende.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="EmpresaVende: do primeiro contato até a venda, sua empresa de serviços em um só lugar" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EmpresaVende — Sua empresa de serviços em um só lugar" />
+    <meta name="twitter:description" content="Funil de vendas, orçamentos, agenda, ordem de serviço e app do técnico. Pronto para 40 segmentos." />
+    <meta name="twitter:image" content="https://empresavende.com/og-image.png" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,24 +38,134 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "EmpresaVende",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web, iOS, Android (PWA)",
-        "url": "https://empresavende.com/",
-        "description": "Sistema de gestão para empresas de serviço: clientes, orçamentos, agenda, ordens de serviço, funil de vendas e documentos.",
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "BRL",
-          "lowPrice": "247",
-          "highPrice": "597"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pmturbo.com/#localbusiness",
+      "name": "PMTurbo",
+      "url": "https://pmturbo.com/",
+      "email": "contato@pmturbo.com",
+      "telephone": "+55-48-98810-5199",
+      "taxID": "54.008.386/0001-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Desembargador Vítor Lima, 260 - Sala 214 - Trindade",
+        "addressLocality": "Florianópolis",
+        "addressRegion": "SC",
+        "postalCode": "88040-401",
+        "addressCountry": "BR"
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://empresavende.com/#website",
+      "url": "https://empresavende.com/",
+      "name": "EmpresaVende",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://pmturbo.com/#localbusiness"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://empresavende.com/#software",
+      "name": "EmpresaVende",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android (PWA)",
+      "url": "https://empresavende.com/",
+      "image": "https://empresavende.com/og-image.png",
+      "description": "Sistema de gestão para empresas de serviço: funil de vendas, orçamentos, clientes, agenda, ordens de serviço, app do técnico e comprovante por e-mail.",
+      "publisher": {
+        "@id": "https://pmturbo.com/#localbusiness"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Essencial",
+          "price": "247",
+          "priceCurrency": "BRL",
+          "url": "https://empresavende.com/#precos",
+          "description": "Até 200 orçamentos por mês, usuários ilimitados"
+        },
+        {
+          "@type": "Offer",
+          "name": "Profissional",
+          "price": "397",
+          "priceCurrency": "BRL",
+          "url": "https://empresavende.com/#precos",
+          "description": "Até 500 orçamentos por mês, usuários ilimitados"
+        },
+        {
+          "@type": "Offer",
+          "name": "Empresa",
+          "price": "597",
+          "priceCurrency": "BRL",
+          "url": "https://empresavende.com/#precos",
+          "description": "Até 1.000 orçamentos por mês, usuários ilimitados"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://empresavende.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso instalar alguma coisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O EmpresaVende funciona no navegador. No celular, o técnico pode adicionar o app à tela inicial em poucos toques, sem passar pela loja de aplicativos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve para o meu tipo de empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hoje são 40 segmentos de serviço prontos. Ao criar a conta você escolhe o seu, e os termos, o catálogo, o checklist e o comprovante do serviço já vêm ajustados. Se o seu segmento não estiver na lista, fale com a gente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o teste grátis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você cria a conta, escolhe o segmento e já começa a usar com a sua equipe. Não pedimos cartão de crédito para testar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Meus dados ficam seguros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Só as pessoas da sua empresa acessam os seus clientes, orçamentos e fotos, e cada uma vê apenas o que faz parte do trabalho dela. A conexão é criptografada e as fotos ficam em área privada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso trocar de plano depois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode. Você muda de plano quando quiser, e a diferença é ajustada na próxima cobrança."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O cliente recebe algum documento no final?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Ao concluir o serviço, o sistema gera o documento do seu segmento (certificado, laudo, termo de entrega…) e envia por e-mail para o cliente."
+          }
+        }
+      ]
+    }
+  ]
+}
     </script>
   </head>
   <body>
@@ -94,7 +214,7 @@
             </div>
             <ul class="hero__checks">
               <li>Sem instalação</li>
-              <li>Pronto para o seu ramo</li>
+              <li>Pronto para o seu segmento</li>
               <li>Funciona no celular</li>
             </ul>
           </div>
@@ -215,7 +335,7 @@
               <div class="stage__head">
                 <span class="stage__num">2</span>
                 <div>
-                  <h3>Execução</h3>
+                  <h3>Execução do serviço</h3>
                   <p>Agenda · equipe de campo</p>
                 </div>
               </div>
@@ -293,7 +413,7 @@
                 <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8" /><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" /></svg>
               </div>
               <h3>Ordens de serviço</h3>
-              <p>Checklist de execução do seu ramo, fotos, observações e produtos usados, com numeração automática.</p>
+              <p>Checklist de execução do seu segmento, fotos, observações e produtos usados, com numeração automática.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
@@ -368,7 +488,7 @@
         <div class="container">
           <header class="section__head">
             <p class="eyebrow">40 segmentos</p>
-            <h2>Já vem pronto para o seu ramo</h2>
+            <h2>Já vem pronto para o seu segmento</h2>
             <p>
               Escolha o seu segmento ao criar a conta: os termos das telas, o catálogo inicial, o checklist de execução e o
               comprovante do serviço chegam configurados para o jeito que a sua empresa trabalha.
@@ -550,14 +670,14 @@
                     <path d="M91.5 126l3 3 6-6" class="bv-check-w" />
                     <rect x="114" y="122" width="108" height="8" rx="4" class="bv-line" />
                   </g>
-                  <text x="114" y="61" class="bv-small">Escolha o ramo</text>
+                  <text x="114" y="61" class="bv-small">Escolha o segmento</text>
                   <text x="114" y="89" class="bv-small">Serviços prontos</text>
                   <text x="114" y="117" class="bv-small">Checklist e comprovante</text>
                 </svg>
               </div>
               <div class="benefit__text">
                 <h3>Pronto para usar hoje</h3>
-                <p>Crie a conta, escolha o seu ramo e comece. Serviços, checklist e comprovante já vêm configurados.</p>
+                <p>Crie a conta, escolha o seu segmento e comece. Serviços, checklist e comprovante já vêm configurados.</p>
               </div>
             </article>
 
@@ -681,7 +801,7 @@
             </details>
             <details>
               <summary>Serve para o meu tipo de empresa?</summary>
-              <p>Hoje são 40 segmentos de serviço prontos. Ao criar a conta você escolhe o seu, e os termos, o catálogo, o checklist e o comprovante do serviço já vêm ajustados. Se o seu ramo não estiver na lista, fale com a gente.</p>
+              <p>Hoje são 40 segmentos de serviço prontos. Ao criar a conta você escolhe o seu, e os termos, o catálogo, o checklist e o comprovante do serviço já vêm ajustados. Se o seu segmento não estiver na lista, fale com a gente.</p>
             </details>
             <details>
               <summary>Como funciona o teste grátis?</summary>

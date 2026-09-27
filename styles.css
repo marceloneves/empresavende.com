@@ -416,7 +416,8 @@ p {
 /* Mockup do painel */
 .hero__visual {
   position: relative;
-  padding-right: 40px;
+  padding-right: 96px;
+  padding-bottom: 24px;
 }
 @media (max-width: 560px) {
   .hero__visual {
@@ -473,10 +474,8 @@ p {
 .mock__stats small {
   display: block;
   font-size: 0.68rem;
+  line-height: 1.25;
   color: var(--muted-foreground);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .mock__stats b {
   display: block;
@@ -512,8 +511,7 @@ p {
   display: flex;
   align-items: center;
   gap: 6px;
-  white-space: nowrap;
-  overflow: hidden;
+  line-height: 1.25;
 }
 .mock__kanban h6 i {
   width: 8px;
@@ -538,9 +536,7 @@ p {
   font-size: 0.72rem;
   font-weight: 600;
   margin-bottom: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.3;
 }
 .mock__kanban .card small {
   display: block;
@@ -555,11 +551,11 @@ p {
 .phone {
   position: absolute;
   right: 0;
-  bottom: -40px;
-  width: 190px;
+  bottom: -64px;
+  width: 200px;
   background: oklch(0.145 0 0);
-  border-radius: 30px;
-  padding: 10px;
+  border-radius: 32px;
+  padding: 9px;
   box-shadow: var(--shadow-lg);
 }
 @media (max-width: 560px) {
@@ -568,21 +564,21 @@ p {
   }
 }
 .phone__notch {
-  width: 60px;
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
   height: 16px;
   background: oklch(0.145 0 0);
   border-radius: 0 0 10px 10px;
-  margin: -10px auto 0;
-  position: relative;
   z-index: 1;
 }
 .phone__screen {
   background: oklch(1 0 0);
   color: oklch(0.145 0 0);
-  border-radius: 22px;
-  padding: 14px 12px 12px;
-  margin-top: -16px;
-  padding-top: 24px;
+  border-radius: 24px;
+  padding: 30px 14px 14px;
 }
 .phone__title {
   font-weight: 700;
@@ -855,14 +851,13 @@ p {
 }
 .phone--big .phone__notch {
   background: oklch(0.1 0 0);
-  margin-top: -12px;
+  top: 12px;
   width: 90px;
   height: 22px;
 }
 .phone--big .phone__screen {
   border-radius: 30px;
-  padding: 34px 16px 16px;
-  margin-top: -22px;
+  padding: 40px 16px 16px;
 }
 .phone--big .phone__title {
   font-size: 1.05rem;
@@ -1604,4 +1599,25 @@ p {
   margin-left: 6px;
   color: var(--primary);
   font-weight: 700;
+}
+
+/* ---------- 404 ---------- */
+.notfound {
+  padding: 96px 0 120px;
+  text-align: center;
+}
+.notfound__code {
+  font-size: clamp(5rem, 18vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--primary);
+  opacity: 0.9;
+}
+.notfound h1 {
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  margin: 12px 0 14px;
+}
+.notfound .hero__cta {
+  justify-content: center;
 }

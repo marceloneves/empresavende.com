@@ -1,4 +1,4 @@
-"""Gera /termos-de-uso/ e /politica-de-privacidade/ reaproveitando o topo e o rodapé do index.html.
+"""Gera /termos-de-uso/, /politica-de-privacidade/ e /404.html reaproveitando o topo e o rodapé do index.html.
 Rode de novo após mudar o header/footer da home:  python3 scripts/build-legal.py"""
 import re, pathlib
 
@@ -97,7 +97,7 @@ TERMOS = f'''
 <h2 id="t10">10. Responsabilidades</h2>
 <ul>
   <li>A PMTurbo não se responsabiliza pelo conteúdo cadastrado pelos Usuários, pelos serviços prestados pelo Contratante aos seus clientes nem por decisões tomadas com base nas informações do sistema.</li>
-  <li>Os comprovantes, certificados e demais documentos emitidos pela Plataforma são de responsabilidade do Contratante, que deve conferir se atendem às exigências do seu ramo.</li>
+  <li>Os comprovantes, certificados e demais documentos emitidos pela Plataforma são de responsabilidade do Contratante, que deve conferir se atendem às exigências do seu segmento.</li>
   <li>Na máxima extensão permitida pela lei, a responsabilidade total da PMTurbo fica limitada ao valor pago pelo Contratante nos 12 meses anteriores ao fato.</li>
 </ul>
 
@@ -205,11 +205,20 @@ def page(slug, title, description, body, other):
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} — EmpresaVende</title>
+    <title>{title} | EmpresaVende</title>
     <meta name="description" content="{description}" />
     <meta name="theme-color" content="#15803d" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href="https://empresavende.com/{slug}/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="EmpresaVende" />
+    <meta property="og:title" content="{title} | EmpresaVende" />
+    <meta property="og:description" content="{description}" />
+    <meta property="og:url" content="https://empresavende.com/{slug}/" />
+    <meta property="og:image" content="https://empresavende.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -253,3 +262,41 @@ for slug, title, desc, body, other in [
     out.parent.mkdir(exist_ok=True)
     out.write_text(page(slug, title, desc, body, other), encoding='utf-8')
     print('ok', out.relative_to(ROOT))
+
+
+# ---------- 404 ----------
+NOT_FOUND = f'''<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página não encontrada | EmpresaVende</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#15803d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+{header}
+
+    <main id="conteudo" class="notfound">
+      <div class="container container--narrow">
+        <p class="notfound__code">404</p>
+        <h1>Esta página não existe</h1>
+        <p class="lead">O endereço pode ter mudado ou foi digitado errado. Veja por onde continuar:</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="/">Ir para o início</a>
+          <a class="btn btn--outline btn--lg" href="/#precos">Ver planos e preços</a>
+        </div>
+      </div>
+    </main>
+
+{footer}
+  </body>
+</html>
+'''
+(ROOT / '404.html').write_text(NOT_FOUND, encoding='utf-8')
+print('ok 404.html')
