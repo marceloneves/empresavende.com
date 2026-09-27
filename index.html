@@ -156,6 +156,14 @@
         },
         {
           "@type": "Question",
+          "name": "O meu cliente consegue acompanhar os serviços?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Pelo portal do cliente, com o logotipo e a cor da sua empresa, ele vê os agendamentos, pede reagendamento ou cancela a visita informando o motivo, aprova propostas com um clique e baixa os documentos. O link vai em todos os e-mails enviados a ele."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "O cliente recebe algum documento no final?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -184,6 +192,7 @@
           <a href="#topo" aria-current="page">Início</a>
           <a href="#funcionalidades">Funcionalidades</a>
           <a href="#tecnico">App do técnico</a>
+          <a href="#portal">Portal do cliente</a>
           <a href="#segmentos">Segmentos</a>
           <a href="#precos">Preços</a>
           <a href="#faq">Dúvidas</a>
@@ -385,7 +394,7 @@
                 <svg viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8z" /></svg>
               </div>
               <h3>Funil de vendas</h3>
-              <p>Vários funis com etapas, probabilidade, campos obrigatórios, tarefas automáticas e alerta de oportunidade parada.</p>
+              <p>Vários funis, em quadro ou lista, com etapas, probabilidade, campos obrigatórios, tarefas automáticas e alerta de oportunidade parada.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
@@ -399,14 +408,14 @@
                 <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" /><path d="M14 2v6h6M9 13h8M9 17h5" /></svg>
               </div>
               <h3>Orçamentos</h3>
-              <p>Monte orçamentos com o seu catálogo de serviços e materiais. Aprovou? A oportunidade avança sozinha no funil.</p>
+              <p>Monte orçamentos com o seu catálogo e o logotipo da sua empresa. A proposta vai por e-mail, o cliente aprova com um clique e a oportunidade avança sozinha no funil.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
                 <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></svg>
               </div>
               <h3>Agenda</h3>
-              <p>Distribua os serviços entre a equipe e veja quem está onde, em qual dia e horário.</p>
+              <p>Distribua os serviços entre a equipe dentro do seu horário de atendimento. O cliente recebe o agendamento por e-mail, com botão para salvar na Google Agenda, no Outlook ou no iPhone.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
@@ -479,6 +488,82 @@
                 <span class="phone__btn">Iniciar próximo serviço</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PORTAL DO CLIENTE ============ -->
+      <section class="section section--soft" id="portal">
+        <div class="container">
+          <div class="split">
+            <div>
+              <p class="eyebrow">Portal do cliente</p>
+              <h2>Sua empresa com um portal próprio para os clientes</h2>
+              <p class="lead">
+                Quem assina o EmpresaVende ganha um portal para os próprios clientes, com o logotipo e a cor da empresa.
+                Ali o cliente acompanha as visitas, aprova propostas e baixa documentos sem precisar ligar para o escritório.
+              </p>
+              <a class="btn btn--primary portal__cta" href="https://app.empresavende.com/cadastro">Teste grátis</a>
+            </div>
+            <div class="split__visual" aria-hidden="true">
+              <div class="phone phone--big phone--portal">
+                <div class="phone__notch"></div>
+                <div class="phone__screen">
+                  <p class="portal-brand"><span>SE</span>Sua Empresa</p>
+                  <p class="phone__title">Olá, Condomínio Jardins</p>
+                  <div class="agenda">
+                    <div class="now"><b>12/10</b><span>Manutenção preventiva<small>08:30 · Confirmada</small></span></div>
+                    <div><b>Nova</b><span>Proposta nº 128<small>Aguardando aprovação</small></span></div>
+                    <div><b>Doc.</b><span>Comprovante do serviço<small>Disponível para baixar</small></span></div>
+                  </div>
+                  <span class="phone__btn">Aprovar proposta</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="features portal__features">
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 3a9 9 0 0 0 0 18M3 12h9" /></svg>
+              </div>
+              <h3>Com a sua marca</h3>
+              <p>O portal leva o logotipo da sua empresa e a cor que você escolher, entre cores prontas ou uma personalizada.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
+              </div>
+              <h3>Link em todos os e-mails</h3>
+              <p>Cada e-mail que o cliente recebe da sua empresa traz o link do portal. Não há aplicativo para instalar.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></svg>
+              </div>
+              <h3>Agendamentos</h3>
+              <p>O cliente vê as próximas visitas com data e horário e salva o agendamento na Google Agenda, no Outlook ou no iPhone.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8" /><path d="M21 3v5h-5" /></svg>
+              </div>
+              <h3>Reagendamento e cancelamento</h3>
+              <p>O cliente pede outra data pelo portal e a empresa recebe um aviso por e-mail. Você define o prazo mínimo, e o cliente pode cancelar a visita informando o motivo.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8" /><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" /></svg>
+              </div>
+              <h3>Aprovação de propostas</h3>
+              <p>O cliente aprova a proposta com um clique, pelo portal ou pelo link do e-mail, e a oportunidade avança no funil.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" /><path d="M14 2v6h6M9 13h8M9 17h5" /></svg>
+              </div>
+              <h3>Documentos sempre à mão</h3>
+              <p>Certificados, laudos e comprovantes com o logotipo da sua empresa, prontos para o cliente baixar quando precisar.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -816,6 +901,10 @@
               <p>Pode. Você muda de plano quando quiser, e a diferença é ajustada na próxima cobrança.</p>
             </details>
             <details>
+              <summary>O meu cliente consegue acompanhar os serviços?</summary>
+              <p>Sim. Pelo portal do cliente, com o logotipo e a cor da sua empresa, ele vê os agendamentos, pede reagendamento ou cancela a visita informando o motivo, aprova propostas com um clique e baixa os documentos. O link vai em todos os e-mails enviados a ele.</p>
+            </details>
+            <details>
               <summary>O cliente recebe algum documento no final?</summary>
               <p>Sim. Ao concluir o serviço, o sistema gera o documento do seu segmento (certificado, laudo, termo de entrega…) e envia por e-mail para o cliente.</p>
             </details>
@@ -857,6 +946,7 @@
             <a href="#funcionalidades">Funcionalidades</a>
             <a href="#fluxo">Como funciona</a>
             <a href="#tecnico">App do técnico</a>
+            <a href="#portal">Portal do cliente</a>
             <a href="#precos">Preços</a>
           </nav>
 

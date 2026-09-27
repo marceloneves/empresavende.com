@@ -260,7 +260,7 @@ p {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .menu-toggle {
     display: flex;
   }
@@ -902,6 +902,47 @@ p {
 .agenda .now b,
 .agenda .now small {
   color: oklch(0.527 0.137 150.07);
+}
+
+/* Portal do cliente */
+.portal__cta {
+  margin-top: 28px;
+}
+.portal__features {
+  margin-top: 56px;
+}
+.phone--portal .phone__screen {
+  --brand: oklch(0.527 0.137 150.07);
+}
+.portal-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid oklch(0.922 0 0);
+}
+.portal-brand span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.7rem;
+}
+.phone--portal .agenda .now {
+  background: oklch(0.527 0.137 150.07 / 10%);
+}
+.phone--portal .agenda .now b,
+.phone--portal .agenda .now small {
+  color: var(--brand);
+}
+.phone--portal .phone__btn {
+  background: var(--brand);
 }
 
 .checks {
