@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmpresaVende — Sistema de gestão para empresas de serviço</title>
+    <meta
+      name="description"
+      content="Orçamentos, agenda, ordens de serviço, funil de vendas e documentos em um só sistema. Feito para empresas de serviço de 40 segmentos. Teste grátis."
+    />
+    <meta name="theme-color" content="#15803d" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="canonical" href="https://empresavende.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="EmpresaVende" />
+    <meta property="og:title" content="EmpresaVende — Sua empresa de serviços em um só lugar" />
+    <meta
+      property="og:description"
+      content="Do primeiro contato até a venda: funil de vendas, orçamentos, agenda, ordens de serviço e app do técnico."
+    />
+    <meta property="og:url" content="https://empresavende.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EmpresaVende",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android (PWA)",
+        "url": "https://empresavende.com/",
+        "description": "Sistema de gestão para empresas de serviço: clientes, orçamentos, agenda, ordens de serviço, funil de vendas e documentos.",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "BRL",
+          "lowPrice": "247",
+          "highPrice": "597"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="topo">
+      <div class="container header__inner">
+        <a class="logo" href="#topo" aria-label="EmpresaVende — início">
+          <img src="favicon.svg" alt="" width="32" height="32" />
+          <span>EmpresaVende</span>
+        </a>
+
+        <input type="checkbox" id="menu" class="menu-check" aria-label="Abrir menu" />
+        <nav class="nav" id="nav" aria-label="Principal">
+          <a href="#topo" aria-current="page">Início</a>
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#tecnico">App do técnico</a>
+          <a href="#segmentos">Segmentos</a>
+          <a href="#precos">Preços</a>
+          <a href="#faq">Dúvidas</a>
+          <div class="nav__actions">
+            <a class="btn btn--ghost" href="https://app.empresavende.com/login">Entrar</a>
+            <a class="btn btn--primary" href="https://app.empresavende.com/cadastro">Teste grátis</a>
+          </div>
+        </nav>
+
+        <label class="menu-toggle" for="menu" aria-hidden="true"><span></span><span></span><span></span></label>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <p class="eyebrow">Sistema de gestão para empresas de serviço</p>
+            <h1>Do primeiro contato até a venda, <em>sua empresa em um só lugar.</em></h1>
+            <p class="lead">
+              Funil de vendas, orçamentos, clientes, agenda, ordens de serviço e o app do técnico no celular.
+              Cadastre uma vez e use a informação em todo o atendimento — sem planilha, sem papel, sem retrabalho.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="https://app.empresavende.com/cadastro">Criar conta grátis</a>
+              <a class="btn btn--outline btn--lg" href="#funcionalidades">Ver como funciona</a>
+            </div>
+            <ul class="hero__checks">
+              <li>Sem instalação</li>
+              <li>Pronto para o seu ramo</li>
+              <li>Funciona no celular</li>
+            </ul>
+          </div>
+
+          <!-- Mockup ilustrativo do painel -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span>app.empresavende.com/painel</span></div>
+              <div class="mock__body">
+                <div class="mock__stats">
+                  <div><small>Orçamentos no mês</small><b>48</b><span class="up">+18%</span></div>
+                  <div><small>Serviços hoje</small><b>12</b><span>3 em execução</span></div>
+                  <div><small>Faturamento</small><b>R$ 38,4 mil</b><span class="up">+9%</span></div>
+                </div>
+                <div class="mock__kanban">
+                  <div class="col">
+                    <h6><i class="stage-1"></i>Novo contato</h6>
+                    <div class="card">Condomínio Jardins<small>R$ 2.400</small></div>
+                    <div class="card">Clínica Vida<small>R$ 890</small></div>
+                  </div>
+                  <div class="col">
+                    <h6><i class="stage-2"></i>Orçamento enviado</h6>
+                    <div class="card">Restaurante Sabor<small>R$ 1.250</small></div>
+                  </div>
+                  <div class="col">
+                    <h6><i class="stage-3"></i>Aprovado</h6>
+                    <div class="card card--ok">Loja Centro<small>R$ 3.100</small></div>
+                    <div class="card card--ok">Escritório Alfa<small>R$ 640</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="phone">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <p class="phone__title">Serviço nº 1284</p>
+                <p class="phone__sub">Hoje, 14:00 · Rua das Flores, 120</p>
+                <ul class="phone__list">
+                  <li class="done">Chegada registrada</li>
+                  <li class="done">Fotos do local</li>
+                  <li class="done">Checklist concluído</li>
+                  <li>Assinatura do cliente</li>
+                </ul>
+                <span class="phone__btn">Finalizar serviço</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DORES ============ -->
+      <section class="section pains-section" id="dores">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow eyebrow--alert">Isso acontece na sua empresa?</p>
+            <h2>Cada contato sem retorno é dinheiro que fica na mesa</h2>
+            <p>Planilha, caderno e grupo de WhatsApp funcionam até o dia em que a empresa começa a crescer.</p>
+          </header>
+          <div class="pains">
+            <article class="pain">
+              <h3>Orçamento enviado e esquecido</h3>
+              <p>O cliente pediu preço, você mandou pelo WhatsApp e ninguém fez o retorno. A venda foi para o concorrente.</p>
+            </article>
+            <article class="pain">
+              <h3>Contatos perdidos no celular</h3>
+              <p>Os pedidos chegam por WhatsApp, telefone e e-mail e ficam espalhados. Ninguém sabe em que pé está cada negociação.</p>
+            </article>
+            <article class="pain">
+              <h3>Não sabe quanto vai vender</h3>
+              <p>Sem funil, não dá para saber quantos orçamentos estão abertos, quanto vale cada um e quem da equipe está vendendo.</p>
+            </article>
+            <article class="pain">
+              <h3>A mesma informação digitada três vezes</h3>
+              <p>O endereço vai no orçamento, depois na agenda, depois no papel do técnico. Cada cópia é uma chance de erro.</p>
+            </article>
+            <article class="pain">
+              <h3>Técnico ligando o dia inteiro</h3>
+              <p>Qual o endereço? O que é para fazer? Já foi pago? A equipe de campo depende do escritório para tudo.</p>
+            </article>
+            <article class="pain">
+              <h3>Cliente que não volta</h3>
+              <p>O serviço tinha que ser refeito em seis meses, mas ninguém lembrou de ligar. A receita recorrente escapa sem ninguém perceber.</p>
+            </article>
+          </div>
+          <p class="pains__answer">
+            O EmpresaVende organiza tudo isso <b>em um só lugar</b>, do primeiro contato até a venda e o serviço
+            concluído.
+            <a href="#fluxo">Veja como funciona ↓</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ FLUXO ============ -->
+      <section class="section section--soft" id="fluxo">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Como funciona</p>
+            <h2>Cadastre uma vez. A informação acompanha o serviço até o fim.</h2>
+            <p>O que o comercial registra no primeiro contato chega pronto ao orçamento, à agenda, ao celular do técnico e ao comprovante do cliente.</p>
+          </header>
+
+          <ol class="stages">
+            <li class="stage">
+              <div class="stage__head">
+                <span class="stage__num">1</span>
+                <div>
+                  <h3>Venda</h3>
+                  <p>Escritório · comercial</p>
+                </div>
+              </div>
+              <ul class="stage__steps">
+                <li>Contato entra no funil de vendas</li>
+                <li>Orçamento com o seu catálogo</li>
+                <li>Cliente aprova e a oportunidade vira venda</li>
+              </ul>
+            </li>
+            <li class="stage">
+              <div class="stage__head">
+                <span class="stage__num">2</span>
+                <div>
+                  <h3>Execução</h3>
+                  <p>Agenda · equipe de campo</p>
+                </div>
+              </div>
+              <ul class="stage__steps">
+                <li>Serviço agendado para o técnico</li>
+                <li>Ordem de serviço já com endereço e itens</li>
+                <li>Checklist e fotos pelo celular</li>
+              </ul>
+            </li>
+            <li class="stage">
+              <div class="stage__head">
+                <span class="stage__num">3</span>
+                <div>
+                  <h3>Entrega e renovação</h3>
+                  <p>Automático</p>
+                </div>
+              </div>
+              <ul class="stage__steps">
+                <li>Comprovante enviado por e-mail ao cliente</li>
+                <li>Histórico completo do cliente</li>
+                <li>Próximo serviço e renovação gerados sozinhos</li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="datastrip">
+            <span class="datastrip__label">Digitado uma única vez:</span>
+            <span>Nome do cliente</span>
+            <span>Endereço</span>
+            <span>Telefone e e-mail</span>
+            <span>Serviços e valores</span>
+            <span>Observações</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FUNCIONALIDADES ============ -->
+      <section class="section" id="funcionalidades">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Funcionalidades</p>
+            <h2>Tudo o que o escritório e a equipe de campo precisam</h2>
+          </header>
+          <div class="features">
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8z" /></svg>
+              </div>
+              <h3>Funil de vendas</h3>
+              <p>Vários funis com etapas, probabilidade, campos obrigatórios, tarefas automáticas e alerta de oportunidade parada.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4" /><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 11a3 3 0 1 0 0-6M22 21c0-3-2-5-4-5.5" /></svg>
+              </div>
+              <h3>Clientes e locais</h3>
+              <p>Cadastro completo com endereços e histórico de tudo o que foi orçado e executado para cada cliente.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" /><path d="M14 2v6h6M9 13h8M9 17h5" /></svg>
+              </div>
+              <h3>Orçamentos</h3>
+              <p>Monte orçamentos com o seu catálogo de serviços e materiais. Aprovou? A oportunidade avança sozinha no funil.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></svg>
+              </div>
+              <h3>Agenda</h3>
+              <p>Distribua os serviços entre a equipe e veja quem está onde, em qual dia e horário.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8" /><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" /></svg>
+              </div>
+              <h3>Ordens de serviço</h3>
+              <p>Checklist de execução do seu ramo, fotos, observações e produtos usados, com numeração automática.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
+              </div>
+              <h3>Comprovante do serviço por e-mail</h3>
+              <p>Certificado, laudo ou comprovante gerado ao concluir o serviço e enviado direto para o e-mail do cliente.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18" /><path d="M7 15l4-4 3 3 5-6" /></svg>
+              </div>
+              <h3>Análises e relatórios</h3>
+              <p>Dashboard com vendas, serviços e faturamento. Baixe análises como imagem para mandar no grupo da equipe.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8" /><path d="M21 3v5h-5" /></svg>
+              </div>
+              <h3>Renovação automática</h3>
+              <p>Serviços periódicos geram a próxima ordem sozinhos, e o funil cria oportunidades de renovação todos os dias.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+              </div>
+              <h3>Equipe e permissões</h3>
+              <p>Perfis de administrador, comercial, técnico e financeiro. Cada um vê só o que precisa.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ APP DO TÉCNICO ============ -->
+      <section class="section section--dark" id="tecnico">
+        <div class="container split">
+          <div>
+            <p class="eyebrow eyebrow--light">App do técnico</p>
+            <h2>A equipe de campo com tudo no bolso</h2>
+            <p class="lead">
+              O técnico instala o EmpresaVende no celular (iPhone ou Android) direto do navegador, sem loja de aplicativos.
+              Abre a agenda do dia, chega no cliente e registra o serviço na hora.
+            </p>
+            <ul class="checks checks--light">
+              <li>Agenda do dia com endereço e dados do cliente</li>
+              <li>Checklist de execução do seu segmento</li>
+              <li>Fotos e observações anexadas à ordem de serviço</li>
+              <li>Botões grandes, pensados para usar com uma mão</li>
+              <li>Comprovante do serviço gerado ao concluir</li>
+            </ul>
+          </div>
+          <div class="split__visual" aria-hidden="true">
+            <div class="phone phone--big">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <p class="phone__title">Agenda de hoje</p>
+                <div class="agenda">
+                  <div><b>08:30</b><span>Condomínio Jardins<small>Manutenção preventiva</small></span></div>
+                  <div class="now"><b>10:00</b><span>Clínica Vida<small>Em execução</small></span></div>
+                  <div><b>14:00</b><span>Restaurante Sabor<small>Instalação</small></span></div>
+                  <div><b>16:30</b><span>Loja Centro<small>Visita técnica</small></span></div>
+                </div>
+                <span class="phone__btn">Iniciar próximo serviço</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SEGMENTOS ============ -->
+      <section class="section" id="segmentos">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">40 segmentos</p>
+            <h2>Já vem pronto para o seu ramo</h2>
+            <p>
+              Escolha o seu segmento ao criar a conta: os termos das telas, o catálogo inicial, o checklist de execução e o
+              comprovante do serviço chegam configurados para o jeito que a sua empresa trabalha.
+            </p>
+          </header>
+
+          <!-- Filtro só com CSS: cada rádio esconde os segmentos das outras categorias (ver styles.css). -->
+          <input class="sr-only" type="radio" name="cat" id="c-all" checked />
+          <input class="sr-only" type="radio" name="cat" id="c-repair" />
+          <input class="sr-only" type="radio" name="cat" id="c-vehicles" />
+          <input class="sr-only" type="radio" name="cat" id="c-building" />
+          <input class="sr-only" type="radio" name="cat" id="c-technology" />
+          <input class="sr-only" type="radio" name="cat" id="c-cleaning" />
+          <input class="sr-only" type="radio" name="cat" id="c-maintenance" />
+          <input class="sr-only" type="radio" name="cat" id="c-services" />
+          <div class="chips" aria-label="Categorias">
+            <label class="chip" for="c-all">Todos</label>
+            <label class="chip" for="c-repair">Assistência e consertos</label>
+            <label class="chip" for="c-vehicles">Veículos</label>
+            <label class="chip" for="c-building">Obras e instalações</label>
+            <label class="chip" for="c-technology">Tecnologia e segurança</label>
+            <label class="chip" for="c-cleaning">Limpeza e áreas externas</label>
+            <label class="chip" for="c-maintenance">Manutenção especializada</label>
+            <label class="chip" for="c-services">Comércio e serviços</label>
+          </div>
+
+          <ul class="segments">
+            <li data-cat="repair">Assistência de celulares</li>
+            <li data-cat="repair">Assistência de informática</li>
+            <li data-cat="repair">Chaveiro</li>
+            <li data-cat="repair">Conserto de eletrodomésticos</li>
+            <li data-cat="repair">Costura e ajustes</li>
+            <li data-cat="repair">Refrigeração e ar-condicionado</li>
+            <li data-cat="repair">Relojoaria</li>
+            <li data-cat="repair">Sapataria</li>
+            <li data-cat="repair">Ótica</li>
+            <li data-cat="vehicles">Autoelétrica</li>
+            <li data-cat="vehicles">Borracharia</li>
+            <li data-cat="vehicles">Estética automotiva e lava-jato</li>
+            <li data-cat="vehicles">Funilaria e pintura</li>
+            <li data-cat="vehicles">Oficina mecânica</li>
+            <li data-cat="building">Eletricistas</li>
+            <li data-cat="building">Encanadores</li>
+            <li data-cat="building">Energia solar</li>
+            <li data-cat="building">Gestão de obras</li>
+            <li data-cat="building">Marcenarias</li>
+            <li data-cat="building">Móveis planejados</li>
+            <li data-cat="building">Reformas</li>
+            <li data-cat="building">Serralherias</li>
+            <li data-cat="building">Vidraçarias</li>
+            <li data-cat="technology">Câmeras e alarmes (CFTV)</li>
+            <li data-cat="technology">Provedor de internet</li>
+            <li data-cat="technology">Suporte de TI</li>
+            <li data-cat="cleaning">Dedetização</li>
+            <li data-cat="cleaning">Empresa de limpeza</li>
+            <li data-cat="cleaning">Jardinagem e paisagismo</li>
+            <li data-cat="cleaning">Limpeza de estofados</li>
+            <li data-cat="cleaning">Limpeza de vidros</li>
+            <li data-cat="cleaning">Manutenção de piscinas</li>
+            <li data-cat="cleaning">Material de limpeza</li>
+            <li data-cat="maintenance">Equipamentos hospitalares</li>
+            <li data-cat="maintenance">Manutenção de elevadores</li>
+            <li data-cat="maintenance">Manutenção industrial</li>
+            <li data-cat="maintenance">Portões automáticos</li>
+            <li data-cat="services">Gráfica e comunicação visual</li>
+            <li data-cat="services">Pet shop (banho e tosa)</li>
+            <li data-cat="services">Recrutamento e seleção</li>
+          </ul>
+          <p class="seg-empty">
+            Não achou o seu? <a href="#contato">Fale com a gente</a> — novos segmentos entram com frequência.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ BENEFÍCIOS ============ -->
+      <section class="section section--soft">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Por que o EmpresaVende</p>
+            <h2>Simples para a equipe, seguro para a empresa</h2>
+          </header>
+          <div class="benefits">
+            <article class="benefit">
+              <div class="benefit__visual" aria-hidden="true">
+                <svg viewBox="0 0 320 170" class="bv">
+                  <!-- notebook -->
+                  <rect x="40" y="28" width="170" height="108" rx="8" class="bv-dev" />
+                  <rect x="50" y="38" width="150" height="88" rx="3" class="bv-screen" />
+                  <rect x="60" y="48" width="60" height="8" rx="4" class="bv-primary" />
+                  <rect x="60" y="64" width="130" height="6" rx="3" class="bv-line" />
+                  <rect x="60" y="76" width="110" height="6" rx="3" class="bv-line" />
+                  <rect x="60" y="94" width="38" height="22" rx="4" class="bv-soft" />
+                  <rect x="104" y="94" width="38" height="22" rx="4" class="bv-soft" />
+                  <rect x="148" y="94" width="42" height="22" rx="4" class="bv-primary-soft" />
+                  <path d="M24 140h202l-10 10H34z" class="bv-dev" />
+                  <!-- tablet -->
+                  <rect x="196" y="56" width="74" height="98" rx="8" class="bv-dev" />
+                  <rect x="203" y="63" width="60" height="84" rx="3" class="bv-screen" />
+                  <rect x="210" y="71" width="30" height="6" rx="3" class="bv-primary" />
+                  <rect x="210" y="84" width="46" height="5" rx="2.5" class="bv-line" />
+                  <rect x="210" y="95" width="38" height="5" rx="2.5" class="bv-line" />
+                  <rect x="210" y="110" width="46" height="28" rx="4" class="bv-soft" />
+                  <!-- celular -->
+                  <rect x="254" y="86" width="44" height="76" rx="8" class="bv-phone" />
+                  <rect x="259" y="93" width="34" height="62" rx="3" class="bv-screen" />
+                  <rect x="264" y="100" width="18" height="5" rx="2.5" class="bv-primary" />
+                  <rect x="264" y="111" width="24" height="4" rx="2" class="bv-line" />
+                  <rect x="264" y="120" width="20" height="4" rx="2" class="bv-line" />
+                  <rect x="264" y="140" width="24" height="9" rx="3" class="bv-primary" />
+                  <!-- nuvem -->
+                  <path d="M246 44a14 14 0 0 1 27-5 11 11 0 1 1 3 22h-28a9 9 0 0 1-2-17z" class="bv-cloud" />
+                  <path d="M256 49l5 5 9-9" class="bv-check" />
+                </svg>
+              </div>
+              <div class="benefit__text">
+                <h3>Acesse de qualquer lugar</h3>
+                <p>Do computador do escritório, do tablet ou do celular. Não precisa instalar nada nem ter servidor.</p>
+              </div>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit__visual" aria-hidden="true">
+                <svg viewBox="0 0 320 170" class="bv">
+                  <path d="M160 18l52 20v38c0 34-22 60-52 72-30-12-52-38-52-72V38z" class="bv-shield" />
+                  <path d="M160 32l40 15v29c0 26-17 46-40 56-23-10-40-30-40-56V47z" class="bv-shield-in" />
+                  <rect x="140" y="76" width="40" height="32" rx="6" class="bv-primary" />
+                  <path d="M148 76v-9a12 12 0 0 1 24 0v9" class="bv-lock" />
+                  <circle cx="160" cy="90" r="4" class="bv-white" />
+                  <rect x="158.5" y="92" width="3" height="8" rx="1.5" class="bv-white" />
+                  <!-- perfis -->
+                  <g class="bv-tag">
+                    <rect x="14" y="40" width="82" height="26" rx="13" />
+                    <circle cx="30" cy="53" r="7" class="bv-primary" />
+                    <text x="42" y="57">Admin</text>
+                  </g>
+                  <g class="bv-tag">
+                    <rect x="8" y="104" width="90" height="26" rx="13" />
+                    <circle cx="24" cy="117" r="7" class="bv-mid" />
+                    <text x="36" y="121">Comercial</text>
+                  </g>
+                  <g class="bv-tag">
+                    <rect x="224" y="40" width="88" height="26" rx="13" />
+                    <circle cx="240" cy="53" r="7" class="bv-mid" />
+                    <text x="252" y="57">Técnico</text>
+                  </g>
+                  <g class="bv-tag">
+                    <rect x="222" y="104" width="94" height="26" rx="13" />
+                    <circle cx="238" cy="117" r="7" class="bv-mid" />
+                    <text x="250" y="121">Financeiro</text>
+                  </g>
+                  <path d="M96 53h14M98 117h12M210 53h14M210 117h12" class="bv-dash" />
+                </svg>
+              </div>
+              <div class="benefit__text">
+                <h3>Seus dados seguros</h3>
+                <p>Só a sua equipe vê os seus clientes e números. E cada pessoa acessa apenas o que faz parte do trabalho dela.</p>
+              </div>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit__visual" aria-hidden="true">
+                <svg viewBox="0 0 320 170" class="bv">
+                  <rect x="70" y="18" width="180" height="134" rx="10" class="bv-card" />
+                  <text x="88" y="44" class="bv-title">Sua conta</text>
+                  <rect x="214" y="30" width="22" height="18" rx="9" class="bv-primary-soft" />
+                  <text x="219" y="43" class="bv-small bv-green">2m</text>
+                  <g>
+                    <circle cx="96" cy="70" r="9" class="bv-primary" />
+                    <path d="M91.5 70l3 3 6-6" class="bv-check-w" />
+                    <rect x="114" y="66" width="96" height="8" rx="4" class="bv-line" />
+                  </g>
+                  <g>
+                    <circle cx="96" cy="98" r="9" class="bv-primary" />
+                    <path d="M91.5 98l3 3 6-6" class="bv-check-w" />
+                    <rect x="114" y="94" width="78" height="8" rx="4" class="bv-line" />
+                  </g>
+                  <g>
+                    <circle cx="96" cy="126" r="9" class="bv-primary" />
+                    <path d="M91.5 126l3 3 6-6" class="bv-check-w" />
+                    <rect x="114" y="122" width="108" height="8" rx="4" class="bv-line" />
+                  </g>
+                  <text x="114" y="61" class="bv-small">Escolha o ramo</text>
+                  <text x="114" y="89" class="bv-small">Serviços prontos</text>
+                  <text x="114" y="117" class="bv-small">Checklist e comprovante</text>
+                </svg>
+              </div>
+              <div class="benefit__text">
+                <h3>Pronto para usar hoje</h3>
+                <p>Crie a conta, escolha o seu ramo e comece. Serviços, checklist e comprovante já vêm configurados.</p>
+              </div>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit__visual" aria-hidden="true">
+                <svg viewBox="0 0 320 170" class="bv">
+                  <rect x="110" y="52" width="100" height="66" rx="10" class="bv-card" />
+                  <rect x="122" y="64" width="44" height="7" rx="3.5" class="bv-primary" />
+                  <rect x="122" y="80" width="76" height="5" rx="2.5" class="bv-line" />
+                  <rect x="122" y="91" width="60" height="5" rx="2.5" class="bv-line" />
+                  <rect x="122" y="102" width="40" height="8" rx="4" class="bv-primary-soft" />
+                  <path d="M76 44C94 50 104 58 110 66M244 44c-18 6-28 14-34 22M160 140v-22" class="bv-link" />
+                  <circle cx="60" cy="38" r="22" class="bv-avatar" />
+                  <text x="60" y="44" class="bv-av">V</text>
+                  <circle cx="260" cy="38" r="22" class="bv-avatar" />
+                  <text x="260" y="44" class="bv-av">T</text>
+                  <circle cx="160" cy="146" r="18" class="bv-avatar" />
+                  <text x="160" y="152" class="bv-av">F</text>
+                  <text x="60" y="76" class="bv-small bv-mid-t" text-anchor="middle">Vendedor</text>
+                  <text x="260" y="76" class="bv-small bv-mid-t" text-anchor="middle">Técnico</text>
+                  <text x="200" y="152" class="bv-small bv-mid-t">Financeiro</text>
+                  <circle cx="204" cy="56" r="7" class="bv-dot" />
+                </svg>
+              </div>
+              <div class="benefit__text">
+                <h3>Equipe na mesma página</h3>
+                <p>Vendedor, técnico e financeiro veem a mesma informação atualizada. Acabou o "ninguém me avisou".</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PREÇOS ============ -->
+      <!-- Cada plano tem o preço mensal (.m) e o anual com 15% de desconto (.y). Os planos só diferem no limite de orçamentos. -->
+      <section class="section" id="precos">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Preços</p>
+            <h2>Planos que crescem com a sua empresa</h2>
+            <p>Todos os planos têm usuários ilimitados e todas as funcionalidades. Você escolhe pelo volume de orçamentos.</p>
+          </header>
+
+          <input class="sr-only" type="radio" name="period" id="p-monthly" checked />
+          <input class="sr-only" type="radio" name="period" id="p-yearly" />
+          <div class="billing" aria-label="Período de cobrança">
+            <label class="billing__opt" for="p-monthly">Mensal</label>
+            <label class="billing__opt" for="p-yearly">Anual <em>-15%</em></label>
+          </div>
+
+          <div class="plans">
+            <article class="plan">
+              <h3>Essencial</h3>
+              <p class="plan__desc">Para quem está organizando a operação.</p>
+              <p class="plan__price"><span>R$</span><b class="m">247</b><b class="y">210</b><small>/mês</small></p>
+              <p class="plan__note"><span class="m">cobrado mensalmente</span><span class="y">R$ 2.520 cobrados por ano</span></p>
+              <p class="plan__limit">Até <b>200</b> orçamentos por mês</p>
+              <a class="btn btn--outline btn--block" href="https://app.empresavende.com/cadastro">Começar teste grátis</a>
+              <ul class="checks">
+                <li><b>Usuários ilimitados</b></li>
+                <li>Funil de vendas, clientes e agenda</li>
+                <li>Ordens de serviço com checklist</li>
+                <li>App do técnico no celular</li>
+                <li>Comprovante do serviço por e-mail</li>
+                <li>Análises e relatórios</li>
+                <li>Renovação automática de serviços</li>
+              </ul>
+            </article>
+
+            <article class="plan plan--featured">
+              <span class="plan__badge">Mais escolhido</span>
+              <h3>Profissional</h3>
+              <p class="plan__desc">Para equipes que querem vender mais.</p>
+              <p class="plan__price"><span>R$</span><b class="m">397</b><b class="y">337</b><small>/mês</small></p>
+              <p class="plan__note"><span class="m">cobrado mensalmente</span><span class="y">R$ 4.044 cobrados por ano</span></p>
+              <p class="plan__limit">Até <b>500</b> orçamentos por mês</p>
+              <a class="btn btn--primary btn--block" href="https://app.empresavende.com/cadastro">Começar teste grátis</a>
+              <ul class="checks">
+                <li><b>Usuários ilimitados</b></li>
+                <li>Funil de vendas, clientes e agenda</li>
+                <li>Ordens de serviço com checklist</li>
+                <li>App do técnico no celular</li>
+                <li>Comprovante do serviço por e-mail</li>
+                <li>Análises e relatórios</li>
+                <li>Renovação automática de serviços</li>
+              </ul>
+            </article>
+
+            <article class="plan">
+              <h3>Empresa</h3>
+              <p class="plan__desc">Para operações com alto volume.</p>
+              <p class="plan__price"><span>R$</span><b class="m">597</b><b class="y">507</b><small>/mês</small></p>
+              <p class="plan__note"><span class="m">cobrado mensalmente</span><span class="y">R$ 6.084 cobrados por ano</span></p>
+              <p class="plan__limit">Até <b>1.000</b> orçamentos por mês</p>
+              <a class="btn btn--outline btn--block" href="https://app.empresavende.com/cadastro">Começar teste grátis</a>
+              <ul class="checks">
+                <li><b>Usuários ilimitados</b></li>
+                <li>Funil de vendas, clientes e agenda</li>
+                <li>Ordens de serviço com checklist</li>
+                <li>App do técnico no celular</li>
+                <li>Comprovante do serviço por e-mail</li>
+                <li>Análises e relatórios</li>
+                <li>Renovação automática de serviços</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="section section--soft" id="faq">
+        <div class="container container--narrow">
+          <header class="section__head">
+            <p class="eyebrow">Dúvidas frequentes</p>
+            <h2>Perguntas e respostas</h2>
+          </header>
+          <div class="faq">
+            <details>
+              <summary>Preciso instalar alguma coisa?</summary>
+              <p>Não. O EmpresaVende funciona no navegador. No celular, o técnico pode adicionar o app à tela inicial em poucos toques, sem passar pela loja de aplicativos.</p>
+            </details>
+            <details>
+              <summary>Serve para o meu tipo de empresa?</summary>
+              <p>Hoje são 40 segmentos de serviço prontos. Ao criar a conta você escolhe o seu, e os termos, o catálogo, o checklist e o comprovante do serviço já vêm ajustados. Se o seu ramo não estiver na lista, fale com a gente.</p>
+            </details>
+            <details>
+              <summary>Como funciona o teste grátis?</summary>
+              <p>Você cria a conta, escolhe o segmento e já começa a usar com a sua equipe. Não pedimos cartão de crédito para testar.</p>
+            </details>
+            <details>
+              <summary>Meus dados ficam seguros?</summary>
+              <p>Sim. Só as pessoas da sua empresa acessam os seus clientes, orçamentos e fotos, e cada uma vê apenas o que faz parte do trabalho dela. A conexão é criptografada e as fotos ficam em área privada.</p>
+            </details>
+            <details>
+              <summary>Posso trocar de plano depois?</summary>
+              <p>Pode. Você muda de plano quando quiser, e a diferença é ajustada na próxima cobrança.</p>
+            </details>
+            <details>
+              <summary>O cliente recebe algum documento no final?</summary>
+              <p>Sim. Ao concluir o serviço, o sistema gera o documento do seu segmento (certificado, laudo, termo de entrega…) e envia por e-mail para o cliente.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA FINAL ============ -->
+      <section class="cta" id="contato">
+        <div class="container cta__inner">
+          <h2>Pronto para organizar a sua empresa de serviços?</h2>
+          <p>Crie a sua conta em menos de 2 minutos e teste com a sua equipe.</p>
+          <div class="hero__cta">
+            <a class="btn btn--white btn--lg" href="https://app.empresavende.com/cadastro">Criar conta grátis</a>
+            <a class="btn btn--ghost-light btn--lg" href="mailto:contato@empresavende.com">Falar com vendas</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="logo" href="#topo">
+              <img src="favicon.svg" alt="" width="32" height="32" />
+              <span>EmpresaVende</span>
+            </a>
+            <p>
+              Sistema de gestão para empresas de serviço: do primeiro contato até a venda, com o escritório e a equipe
+              de campo trabalhando na mesma informação.
+            </p>
+            <a class="btn btn--primary" href="https://app.empresavende.com/cadastro">Criar conta grátis</a>
+          </div>
+
+          <nav class="footer__col" aria-label="Produto">
+            <h4>Produto</h4>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#fluxo">Como funciona</a>
+            <a href="#tecnico">App do técnico</a>
+            <a href="#precos">Preços</a>
+          </nav>
+
+          <nav class="footer__col" aria-label="Segmentos">
+            <h4>Segmentos</h4>
+            <a href="#segmentos">Assistência técnica</a>
+            <a href="#segmentos">Oficinas e veículos</a>
+            <a href="#segmentos">Obras e instalações</a>
+            <a href="#segmentos">Limpeza e conservação</a>
+            <a href="#segmentos">Ver todos os 40</a>
+          </nav>
+
+          <nav class="footer__col" aria-label="Suporte">
+            <h4>Suporte</h4>
+            <a href="#faq">Dúvidas frequentes</a>
+            <a href="mailto:contato@empresavende.com">contato@empresavende.com</a>
+            <a href="https://app.empresavende.com/login">Entrar no sistema</a>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 EmpresaVende — um produto da <a href="https://pmturbo.com/" rel="noopener">PMTurbo</a> · CNPJ 54.008.386/0001-07</p>
+          <nav aria-label="Legal">
+            <a href="/termos-de-uso/">Termos de uso</a>
+            <a href="/politica-de-privacidade/">Política de privacidade</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
