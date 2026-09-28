@@ -6,6 +6,11 @@
   // Só o domínio próprio (ligado no painel/API); sem URL *.workers.dev.
   "workers_dev": false,
   "preview_urls": false,
+  // Formulário de contato (e-mail pelo Resend; a chave fica no secret RESEND_API_KEY).
+  "vars": {
+    "EMAIL_FROM": "EmpresaVende <contato@empresavende.com>",
+    "CONTATO_TO": "contato@empresavende.com"
+  },
   "assets": {
     "directory": ".",
     "binding": "ASSETS",

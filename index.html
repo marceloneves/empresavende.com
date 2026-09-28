@@ -193,6 +193,7 @@
           <a href="#funcionalidades">Funcionalidades</a>
           <a href="#precos">Preços</a>
           <a href="#faq">Dúvidas</a>
+          <a href="#contato">Contato</a>
           <div class="nav__actions">
             <a class="btn btn--ghost" href="https://app.empresavende.com/login">Entrar</a>
             <a class="btn btn--primary" href="https://app.empresavende.com/cadastro">Teste grátis</a>
@@ -910,14 +911,65 @@
       </section>
 
       <!-- ============ CTA FINAL ============ -->
-      <section class="cta" id="contato">
+      <section class="cta">
         <div class="container cta__inner">
           <h2>Pronto para organizar a sua empresa de serviços?</h2>
           <p>Crie a sua conta em menos de 2 minutos e teste com a sua equipe.</p>
           <div class="hero__cta">
             <a class="btn btn--white btn--lg" href="https://app.empresavende.com/cadastro">Criar conta grátis</a>
-            <a class="btn btn--ghost-light btn--lg" href="mailto:contato@empresavende.com">Falar com vendas</a>
+            <a class="btn btn--ghost-light btn--lg" href="#contato">Falar com vendas</a>
           </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTATO ============ -->
+      <!-- Sem JS: o form vai para o Worker (POST /contato), que repassa ao CRM e volta para #contato-ok ou #contato-erro. -->
+      <section class="section" id="contato">
+        <div class="container container--narrow">
+          <header class="section__head">
+            <p class="eyebrow">Contato</p>
+            <h2>Fale com a gente</h2>
+            <p>Deixe seus dados e a nossa equipe retorna para tirar dúvidas e mostrar o sistema no seu segmento.</p>
+          </header>
+
+          <p class="form-status form-status--ok" id="contato-ok" role="status">
+            Recebemos o seu contato. Em breve a nossa equipe fala com você.
+          </p>
+          <p class="form-status form-status--erro" id="contato-erro" role="alert">
+            Não conseguimos enviar agora. Confira os dados e tente de novo, ou fale com a gente pelo
+            <a href="https://wa.me/5548988105199" target="_blank" rel="noopener">WhatsApp</a>.
+          </p>
+
+          <form class="contact-form" method="post" action="/contato">
+            <label>
+              <span>Nome *</span>
+              <input type="text" name="name" required maxlength="120" autocomplete="name" />
+            </label>
+            <label>
+              <span>Empresa</span>
+              <input type="text" name="company" maxlength="120" autocomplete="organization" />
+            </label>
+            <label>
+              <span>WhatsApp *</span>
+              <input type="tel" name="phone" required minlength="8" maxlength="30" autocomplete="tel" placeholder="(48) 99999-9999" />
+            </label>
+            <label>
+              <span>E-mail</span>
+              <input type="email" name="email" maxlength="200" autocomplete="email" />
+            </label>
+            <label class="contact-form__full">
+              <span>Mensagem</span>
+              <textarea name="message" rows="4" maxlength="2000" placeholder="Qual o segmento da sua empresa e o que você quer organizar?"></textarea>
+            </label>
+            <!-- Campo-armadilha para robôs (invisível para pessoas). -->
+            <label class="contact-form__trap" aria-hidden="true">
+              Site <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </label>
+            <div class="contact-form__full contact-form__actions">
+              <button class="btn btn--primary btn--lg" type="submit">Enviar</button>
+              <small>Seus dados são usados só para retornar o contato. Veja a <a href="/politica-de-privacidade/">política de privacidade</a>.</small>
+            </div>
+          </form>
         </div>
       </section>
     </main>

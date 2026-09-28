@@ -1371,6 +1371,94 @@ p {
   justify-content: center;
 }
 
+/* ---------- Contato ---------- */
+.contact-form {
+  display: grid;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 1.6);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+@media (min-width: 640px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+    padding: 32px;
+  }
+  .contact-form__full {
+    grid-column: 1 / -1;
+  }
+}
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font: inherit;
+  font-weight: 400;
+  color: var(--foreground);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  transition: border-color 0.15s;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--ring);
+  outline: 3px solid color-mix(in oklch, var(--ring) 25%, transparent);
+  outline-offset: 0;
+}
+.contact-form__trap {
+  position: absolute;
+  left: -9999px;
+}
+.contact-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.contact-form__actions small {
+  color: var(--muted-foreground);
+  flex: 1 1 240px;
+}
+.contact-form__actions a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+/* Retorno do envio, mostrado pela âncora (#contato-ok / #contato-erro). */
+.form-status {
+  display: none;
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  scroll-margin-top: 120px;
+}
+.form-status:target {
+  display: block;
+}
+.form-status--ok {
+  background: var(--primary-soft);
+  color: var(--primary-strong);
+}
+.form-status--erro {
+  background: color-mix(in oklch, var(--destructive) 10%, transparent);
+  color: var(--destructive);
+}
+.form-status a {
+  text-decoration: underline;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--sidebar);
