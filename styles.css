@@ -1461,11 +1461,10 @@ p {
 
 /* ---------- Footer ---------- */
 .footer {
-  background: var(--sidebar);
-  border-top: 1px solid var(--border);
+  background: #000;
   padding: 64px 0 0;
   font-size: 0.925rem;
-  color: var(--muted-foreground);
+  color: var(--dark-muted-foreground);
 }
 .footer__grid {
   display: grid;
@@ -1490,7 +1489,7 @@ p {
   }
 }
 .footer__brand .logo {
-  color: var(--foreground);
+  color: var(--dark-foreground);
   margin-bottom: 14px;
 }
 .footer__brand p {
@@ -1510,10 +1509,10 @@ p {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--foreground);
+  color: var(--dark-foreground);
 }
 .footer a:not(.btn):not(.logo):hover {
-  color: var(--primary);
+  color: var(--dark-primary);
 }
 .footer__col a {
   overflow-wrap: anywhere;
@@ -1525,7 +1524,7 @@ p {
   justify-content: space-between;
   gap: 12px 24px;
   padding: 24px 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--dark-border);
   font-size: 0.85rem;
 }
 .footer__bottom nav {
