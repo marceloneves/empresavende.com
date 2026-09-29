@@ -6,7 +6,7 @@
     <title>Sistema de Gestão para Empresas de Serviço | EmpresaVende</title>
     <meta
       name="description"
-      content="Funil de vendas, orçamentos, agenda, ordem de serviço e app do técnico em um só sistema. Pronto para 40 segmentos de serviço. Usuários ilimitados. Teste grátis."
+      content="Funil de vendas, orçamentos, agenda, ordem de serviço, estoque e app do técnico que funciona sem internet, em um só sistema. Pronto para 40 segmentos de serviço. Usuários ilimitados. Teste grátis."
     />
     <meta name="theme-color" content="#15803d" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -79,7 +79,7 @@
       "operatingSystem": "Web, iOS, Android (PWA)",
       "url": "https://empresavende.com/",
       "image": "https://empresavende.com/og-image.png",
-      "description": "Sistema de gestão para empresas de serviço: funil de vendas, orçamentos, clientes, agenda, ordens de serviço, app do técnico e comprovante por e-mail.",
+      "description": "Sistema de gestão para empresas de serviço: funil de vendas, orçamentos, clientes, agenda, ordens de serviço, estoque de materiais, app do técnico que funciona sem internet e comprovante por e-mail.",
       "publisher": {
         "@id": "https://pmturbo.com/#localbusiness"
       },
@@ -168,6 +168,22 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim. Ao concluir o serviço, o sistema gera o documento do seu segmento (certificado, laudo, termo de entrega…) e envia por e-mail para o cliente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O app do técnico funciona sem internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Os atendimentos abertos ficam salvos no celular, e o técnico abre, inicia, preenche e finaliza normalmente sem sinal. O que foi feito é enviado sozinho quando a conexão volta, com o horário real de início e de finalização."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá para controlar o estoque de materiais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Você escolhe quais materiais controlar, lança entradas com custo e ajustes de inventário. O que o técnico usa sai do estoque ao finalizar o atendimento, e os relatórios mostram consumo, custo por cliente e o que precisa repor."
           }
         }
       ]
@@ -349,7 +365,7 @@
               <ul class="stage__steps">
                 <li>Serviço agendado para o técnico</li>
                 <li>Ordem de serviço já com endereço e itens</li>
-                <li>Checklist e fotos pelo celular</li>
+                <li>Checklist, fotos e materiais pelo celular, mesmo sem internet</li>
               </ul>
             </li>
             <li class="stage">
@@ -387,13 +403,15 @@
             <h2>A equipe de campo com tudo no bolso</h2>
             <p class="lead">
               O técnico instala o EmpresaVende no celular (iPhone ou Android) direto do navegador, sem loja de aplicativos.
-              Abre a agenda do dia, chega no cliente e registra o serviço na hora.
+              Abre a agenda do dia, chega no cliente e registra o serviço na hora, mesmo sem internet.
             </p>
             <ul class="checks checks--light">
-              <li>Agenda do dia com endereço e dados do cliente</li>
-              <li>Checklist de execução do seu segmento</li>
-              <li>Fotos e observações anexadas à ordem de serviço</li>
-              <li>Botões grandes, pensados para usar com uma mão</li>
+              <li>Agenda do dia com endereço e dados do cliente, separada por dia</li>
+              <li>Funciona sem internet: o que foi feito é enviado sozinho quando a conexão volta, com o horário real</li>
+              <li>Checklist de execução do seu segmento, em etapas com barra de progresso</li>
+              <li>Fotos, observações e materiais usados, já sugeridos pelo serviço</li>
+              <li>Botões grandes de Mapa e Ligar, pensados para usar com uma mão</li>
+              <li>Tamanho do texto ajustável no celular</li>
               <li>Comprovante do serviço gerado ao concluir</li>
             </ul>
           </div>
@@ -456,21 +474,21 @@
                 <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8" /><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" /></svg>
               </div>
               <h3>Ordens de serviço</h3>
-              <p>Checklist de execução do seu segmento, fotos, observações e produtos usados, com numeração automática.</p>
+              <p>Checklist de execução do seu segmento, fotos, observações e materiais usados, com numeração automática, logotipo da sua empresa e linha do tempo do agendamento à finalização.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
                 <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /><path d="M4 7l8 6 8-6" /></svg>
               </div>
               <h3>Comprovante do serviço por e-mail</h3>
-              <p>Certificado, laudo ou comprovante gerado ao concluir o serviço e enviado direto para o e-mail do cliente.</p>
+              <p>Certificado, laudo ou comprovante com o logotipo da sua empresa, gerado ao concluir o serviço e enviado direto para o e-mail do cliente. A lista mostra o que está válido, vencendo e para renovar.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
                 <svg viewBox="0 0 24 24"><path d="M3 3v18h18" /><path d="M7 15l4-4 3 3 5-6" /></svg>
               </div>
               <h3>Análises e relatórios</h3>
-              <p>Dashboard com vendas, serviços e faturamento. Baixe análises como imagem para mandar no grupo da equipe.</p>
+              <p>Dashboard com vendas, serviços, faturamento e estoque. Baixe análises como imagem para mandar no grupo da equipe.</p>
             </article>
             <article class="feature">
               <div class="feature__icon">
@@ -485,6 +503,27 @@
               </div>
               <h3>Equipe e permissões</h3>
               <p>Perfis de administrador, comercial, técnico e financeiro. Cada um vê só o que precisa.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z" /><path d="M3 7l9 4 9-4M12 11v10" /></svg>
+              </div>
+              <h3>Estoque de materiais</h3>
+              <p>Escolha quais materiais controlar. O que é usado sai do estoque ao finalizar o atendimento, e você vê saldo, itens para repor, valor em estoque e o custo de cada serviço.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3" /><path d="M7 15h10" /></svg>
+              </div>
+              <h3>Receita por serviço</h3>
+              <p>Cada serviço do catálogo diz quais materiais e quanto consome. Na execução, os materiais já vêm preenchidos para o técnico só conferir.</p>
+            </article>
+            <article class="feature">
+              <div class="feature__icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01" /></svg>
+              </div>
+              <h3>Ajuda em cada tela</h3>
+              <p>O ícone de ajuda ao lado do nome da tela abre o manual já na parte que explica aquela tela, com uma página para cada relatório.</p>
             </article>
           </div>
         </div>
@@ -905,6 +944,14 @@
             <details>
               <summary>O cliente recebe algum documento no final?</summary>
               <p>Sim. Ao concluir o serviço, o sistema gera o documento do seu segmento (certificado, laudo, termo de entrega…) e envia por e-mail para o cliente.</p>
+            </details>
+            <details>
+              <summary>O app do técnico funciona sem internet?</summary>
+              <p>Sim. Os atendimentos abertos ficam salvos no celular, e o técnico abre, inicia, preenche e finaliza normalmente sem sinal. O que foi feito é enviado sozinho quando a conexão volta, com o horário real de início e de finalização.</p>
+            </details>
+            <details>
+              <summary>Dá para controlar o estoque de materiais?</summary>
+              <p>Sim. Você escolhe quais materiais controlar, lança entradas com custo e ajustes de inventário. O que o técnico usa sai do estoque ao finalizar o atendimento, e os relatórios mostram consumo, custo por cliente e o que precisa repor.</p>
             </details>
           </div>
         </div>
